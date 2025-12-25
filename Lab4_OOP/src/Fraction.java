@@ -26,10 +26,18 @@ public class Fraction {
             btmN = btmN * f.btmN;
         }
     }
+    public int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
     public boolean myEquals(Fraction x) {
         return (double) topN/btmN == (double )x.topN/x.btmN;
     }
     public void LowestTermFrac() {
-        
+        int divisor = gcd(Math.abs(topN), Math.abs(btmN));
+        topN /= divisor;
+        btmN /= divisor;
     }
 }
