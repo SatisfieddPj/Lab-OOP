@@ -39,11 +39,11 @@ public class SeniorProgrammer extends Programmer {
     
     public void compliment(Programmer p) {
         p.setHappiness(p.getHappiness() + 20);
-        System.out.println(p.getName()+" in a good mood.");
+        System.out.println(p.getName()+" in a good mood");
     }
     
     public void blame(Programmer p) {
         p.setHappiness(p.getHappiness() - 20);
-        System.out.println(p.getName() + " in a bad mood.");
+        System.out.println(p.getName() + " in a bad mood");
     }
 }

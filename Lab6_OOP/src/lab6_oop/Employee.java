@@ -20,7 +20,7 @@ public class Employee {
     
     @Override
     public String toString() {
-        return ("My name is " + name + ". \nI have " + energy + " energy left.\nI have balance of " + wallet.getBalance() + " baht.");
+        return ("My name is " + name + ". \nI have " + energy + " energy left.\nI have a balance of " + wallet.getBalance() + " baht.");
     }
     
     public boolean buyFood(Seller s) {
@@ -30,7 +30,7 @@ public class Employee {
     }
     
     public void eat(Food f) {
-        energy += Food.energy;
+        energy += Food.getEnergy();
     }
     
     public String getName() {

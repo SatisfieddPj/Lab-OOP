@@ -9,7 +9,7 @@ package lab6_oop;
  * @author Achoo_QwQ
  */
 public class Food {
-    final static int energy = 10;
+    private final static int energy = 10;
     private static double price = 50;
     public static void setPrice(double price) {
         if (price > Food.price)
