@@ -1,4 +1,6 @@
-package oop_lab09_01;
+package oop_lab09_02;
+
+import oop_lab09_01.CalculatorSample;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -9,13 +11,13 @@ package oop_lab09_01;
  *
  * @author Achoo_QwQ
  */
-public class OOP_Lab09_01 {
+public class OOP_Lab09 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new CalculatorSample();
+        new TellerGUI();
     }
     
 }
