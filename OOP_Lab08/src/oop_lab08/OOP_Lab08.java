@@ -14,7 +14,7 @@ public class OOP_Lab08 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new MDIFromGUI();
+        new CalculatorTwoGUI();
     }
     
 }
