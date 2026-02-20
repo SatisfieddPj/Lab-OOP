@@ -21,12 +21,7 @@ public class TellerGUI {
     private Account acct;
 
     public TellerGUI() {
-        // Initialize the data model
-        acct = new Account(6000, "User"); // Set initial balance to 6000
-
-        // ... your current UI code ...
-        txt1 = new JTextField(String.valueOf(acct.getBalance()));
-        txt1.setEditable(false);
+        acct = new Account(6000, "User");
         
         fr = new JFrame("Teller GUI");
         label1 = new JLabel("Balance");
@@ -35,7 +30,7 @@ public class TellerGUI {
         panel2 = new JPanel();
         panel3 = new JPanel();
         panel4 = new JPanel();
-        txt1 = new JTextField("6000");
+        txt1 = new JTextField(String.valueOf(acct.getBalance()));
         txt1.setEditable(false);
         txt2 = new JTextField();
         bn_Deposit = new JButton("Deposit");
@@ -59,7 +54,6 @@ public class TellerGUI {
         fr.add(panel3);
         fr.add(panel4);
         
-        // Create handler and pass 'this' (the GUI) and the account
         TellerHandler handler = new TellerHandler(this, acct);
 
         bn_Deposit.addActionListener(handler);
@@ -71,6 +65,7 @@ public class TellerGUI {
         fr.setVisible(true);
     }
     
+    // getter for txt1 & txt2
     public JTextField getTxt1() { return txt1; }
     public JTextField getTxt2() { return txt2; }
 }
