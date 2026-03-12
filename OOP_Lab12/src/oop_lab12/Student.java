@@ -35,14 +35,35 @@ public class Student {
         this.ID = id;
     }
     
+    public void setID(String id) {
+        if (id.isEmpty() || !(id.matches("\\d+"))) {
+            this.ID = 0;
+        } else {
+            this.ID = Integer.parseInt(id);
+        }
+    }
+    
     public int getID() {return ID;}
     
     public void withdraw(int amount) {
-        money += amount;
+        money -= amount;
     }
     
     public void deposit(int amount) {
-        money -= amount;
+        money += amount;
+    }
+    
+    public void setMoney(int money) {
+        this.money = money;
+    }
+    
+    public void setMoney(String money) {
+        if (money.isEmpty() || !(money.matches("\\d+")))  {
+            this.ID = 0;
+        } else {
+            this.money = Integer.parseInt(money);
+
+        }
     }
     
     public int getMoney() {return money;}

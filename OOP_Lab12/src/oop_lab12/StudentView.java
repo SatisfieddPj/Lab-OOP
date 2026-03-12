@@ -28,9 +28,9 @@ public class StudentView {
         lb_id = new JLabel("ID:");
         lb_name = new JLabel("Name:");
         lb_mn = new JLabel("Money:");
-        txt_id = new JTextField();
-        txt_name = new JTextField();
-        txt_mn = new JTextField(student.getMoney());
+        txt_id = new JTextField("");
+        txt_name = new JTextField("   ");
+        txt_mn = new JTextField("0");
         txt_mn.setEditable(false);
         btn_dps = new JButton("Deposit");
         btn_wthd = new JButton("Withdraw");
@@ -51,9 +51,12 @@ public class StudentView {
         frame.add(panel1, BorderLayout.NORTH);
         frame.add(panel2, BorderLayout.CENTER);
         
+        StudentViewHandler handler = new StudentViewHandler(student, txt_name, txt_id, txt_mn);
         
-        
-        frame.setResizable(false);
+        frame.addWindowListener(handler);
+        btn_dps.addActionListener(handler);
+        btn_wthd.addActionListener(handler);
+
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
