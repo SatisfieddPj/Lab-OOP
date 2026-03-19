@@ -14,9 +14,9 @@ public class OOP_Lab13 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        new PoringConstructor();
+        new PoringConstructor();
 //        MyFrame.main(args);
-        MyTimerFrame.main(args);
+//        MyTimerFrame.main(args);
     }
     
 }

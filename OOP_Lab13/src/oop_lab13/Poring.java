@@ -45,8 +45,8 @@ public class Poring implements Runnable {
             }
         });
 
-        int x = (int) (Math.random() * 800);
-        int y = (int) (Math.random() * 600);
+        int x = (int) (Math.random() * 1800);
+        int y = (int) (Math.random() * 900);
         frame.setLocation(x, y);
     }
 
